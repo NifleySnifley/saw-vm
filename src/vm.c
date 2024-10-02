@@ -314,17 +314,6 @@ char *read_str(FILE *fp) {
     return result;
 }
 
-void saw_insn_call(vm_t *vm) {
-    saw_byte_t call_type;
-    if(fread(&call_type, sizeof(call_type), 1, vm->fp) != sizeof(call_type)) SAW_ERROR("Failed to read call type!");
-
-    char *fn_name = read_str(vm->fp);
-    char *fn_desc = read_str(vm->fp);
-
-    //TODO: call the function.
-    printf("[saw-vm]: Calling function with call_type=%d, fn=%s, desc=%s\n", call_type, fn_name, fn_desc);
-}
-
 void saw_insn_halt(vm_t *vm) {
     vm->running = 0;
 }

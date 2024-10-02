@@ -28,6 +28,5 @@ branch_if_positive,0,Branches to the offset below the top of the stack if the el
 branch_if_equal,0,Branches to the offset indicated by the third highest stack element if the two above it are equal.
 stackdump,0,A temporary opcode that prints the stack to stdout.
 stackprint,0,Prints the top element of the stack to stdout.
-call,2,"Calls a function. The arguments from first to last are the name of the function, the type string (like Java, not documented yet), and the type of call, which is always one for now."
 breakpoint,0,A breakpoint for the debugger.
 halt,0,Exits the program.
